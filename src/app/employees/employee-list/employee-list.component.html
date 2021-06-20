@@ -1,0 +1,20 @@
+<div class="jumbtron">
+    <h1 style="text-align: center">Registered Employee List</h1>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table table-hover">
+                <tr *ngFor="let employee of employeeList">
+                    <td [routerLink]="['/loadEmployee', employee.Id]">{{ employee.Name }}</td>
+                    <td [routerLink]="['/loadEmployee', employee.Id]">{{ employee.Salary }}</td>
+                    <td [routerLink]="['/loadEmployee', employee.Id]">{{ employee.Age }}</td>
+                    <td><button class="btn btn-danger btn-sm" (click)="DeleteEmployee(employee.Id)">Delete</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-2">
+            <!-- <button class="btn btn-primary" style="float: right" (click)="CreateEmployee()">New</button> -->
+            <a class="btn btn-primary" style="float: right" routerLink="/newEmployee">New</a>
+        </div>
+    </div>
+</div>

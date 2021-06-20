@@ -1,0 +1,26 @@
+<div class="jumbtron">
+    <h1 style="text-align: center">Employee Registration</h1>
+    <hr>
+    <div class="row">
+        <div class="col-md-5">
+            <form (submit)="onSubmit()">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input name="Name" [(ngModel)]="varEmployeeDetails.Name" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label>Salary</label>
+                    <input name="Salary" [(ngModel)]="varEmployeeDetails.Salary" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label>Age</label>
+                    <input name="Age" [(ngModel)]="varEmployeeDetails.Age" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success btn-block" type="submit" >Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
